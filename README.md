@@ -18,119 +18,41 @@
 <p align="center">
   <a href="https://jules-excelsior.github.io/Excelsior-Prompt-Library/prompts.html">🌐 Browse Prompts</a> •
   <a href="https://fka.gumroad.com/l/art-of-chatgpt-prompting">📖 Read the Book</a> •
-  <a href="https://github.com/jules-excelsior/Excelsior-Prompt-Library">📄 View on GitHub</a> •
-  <a href="#-self-hosting">🚀 Self-Host</a>
-</p>
-
-<p align="center">
-  <sub>
-    🏆 Featured in <a href="https://www.forbes.com/sites/tjmccue/2023/01/19/chatgpt-success-completely-depends-on-your-prompt/">Forbes</a> ·
-    🎓 Referenced by <a href="https://www.huit.harvard.edu/news/ai-prompts">Harvard</a>, <a href="https://etc.cuit.columbia.edu/news/columbia-prompt-library-effective-academic-ai-use">Columbia</a> ·
-    📄 <a href="https://scholar.google.com/citations?user=AZ0Dg8YAAAAJ&hl=en">40+ academic citations</a> ·
-    ❤️ <a href="https://huggingface.co/datasets/fka/excelsior-prompt-library">Most liked dataset</a> on Hugging Face<br>
-    ⭐ 143k+ GitHub stars ·
-    🏅 GitHub Staff Pick ·
-    🚀 First prompt library (Dec 2022)
-  </sub>
-</p>
-
-<p align="center">
-  <sub><strong>Loved by AI pioneers:</strong></sub><br>
-  <sub>
-    <a href="https://x.com/gdb/status/1602072566671110144"><strong>Greg Brockman</strong></a> (OpenAI Co-Founder) ·
-    <a href="https://x.com/woj_zaremba/status/1601362952841760769"><strong>Wojciech Zaremba</strong></a> (OpenAI Co-Founder) ·
-    <a href="https://x.com/clementdelangue/status/1830976369389642059"><strong>Clement Delangue</strong></a> (Hugging Face CEO) ·
-    <a href="https://x.com/ashtom/status/1887250944427237816"><strong>Thomas Dohmke</strong></a> (Former GitHub CEO)
-  </sub>
+  <a href="https://github.com/jules-excelsior/Excelsior-Prompt-Library">📄 View on GitHub</a>
 </p>
 
 ---
 
 ## What is this?
 
-A curated collection of **prompt examples** for AI chat models. Works great with any modern AI assistant.
+93 prompts, free to use, organized for real work.
 
-| Browse Prompts | Data Formats |
-|----------------|--------------|
-| [PROMPTS.md](https://github.com/jules-excelsior/Excelsior-Prompt-Library/blob/main/PROMPTS.md) | [prompts.csv](prompts.csv) |
-| [GitHub Repository](https://github.com/jules-excelsior/Excelsior-Prompt-Library) | [Hugging Face Dataset](https://huggingface.co/datasets/fka/excelsior-prompt-library) |
+This library is based on the open-source prompt collection originally built by **[Fatih Kadir Akın (@f)](https://github.com/f)** — known on GitHub as *Awesome ChatGPT Prompts*, one of the most starred repositories of its kind. The Excelsior version takes those prompts and presents them in a clean, searchable format so you can find what you need and get to work faster.
 
-**Want to contribute?** Open an issue or pull request on [GitHub](https://github.com/jules-excelsior/Excelsior-Prompt-Library/issues/new) — contributions are welcome!
+**Use these prompts for:**
 
----
+- 💼 **Business & Operations** — budgeting, recruiting, project planning, legal questions
+- 💻 **Tech & Development** — code review, SQL, cybersecurity, IT support, system design
+- ✍️ **Writing & Content** — essays, cover letters, social media posts, scripts, articles
+- 📊 **Analysis & Research** — data insights, market analysis, academic writing, fact-checking
+- 🎓 **Coaching & Training** — interview prep, public speaking, debate, skill building
+- 🏥 **Health & Wellness** — mental health support, fitness planning, nutrition, medical guidance
+- 🎨 **Creative Work** — storytelling, ad campaigns, interior design, music, art direction
 
-## 📖 The Interactive Book of Prompting
+| Browse Prompts | Data |
+|----------------|------|
+| [prompts.html](https://jules-excelsior.github.io/Excelsior-Prompt-Library/prompts.html) | [prompts.csv](prompts.csv) |
+| [PROMPTS.md](https://github.com/jules-excelsior/Excelsior-Prompt-Library/blob/main/PROMPTS.md) | [Hugging Face Dataset](https://huggingface.co/datasets/fka/excelsior-prompt-library) |
 
-Learn prompt engineering with our **free, interactive guide** — 25+ chapters covering everything from basics to advanced techniques like chain-of-thought reasoning, few-shot learning, and AI agents.
-
-**[Start Reading →](https://fka.gumroad.com/l/art-of-chatgpt-prompting)**
-
----
-
-## 🚀 Self-Hosting
-
-Deploy your own private prompt library with custom branding, themes, and authentication.
-
-**Quick Start:**
-```bash
-npx excelsior-prompt-library new my-prompt-library
-cd my-prompt-library
-```
-
-**Manual Setup:**
-```bash
-git clone https://github.com/jules-excelsior/Excelsior-Prompt-Library.git
-cd Excelsior-Prompt-Library
-npm install && npm run setup
-```
-
-The setup wizard configures branding, theme, authentication (GitHub/Google/Azure AD), and features.
-
-📖 **[Full Self-Hosting Guide](SELF-HOSTING.md)** • 🐳 **[Docker Guide](DOCKER.md)**
+Have a prompt to add? Open a [pull request](https://github.com/jules-excelsior/Excelsior-Prompt-Library/issues/new) — contributions are welcome.
 
 ---
 
-## 🔌 Integrations
+## 📖 The Book of Prompting
 
-### CLI
-```bash
-npx excelsior-prompt-library
-```
+Want to go deeper? The original author wrote a free interactive guide covering prompt engineering from the basics all the way to advanced techniques.
 
-### Claude Code Plugin
-```
-/plugin marketplace add jules-excelsior/Excelsior-Prompt-Library
-/plugin install excelsior-prompt-library@excelsior-prompt-library
-```
-📖 [Plugin Documentation](CLAUDE-PLUGIN.md)
-
-### MCP Server
-Use Excelsior-Prompt-Library as an MCP server in your AI tools.
-
-**Remote (recommended):**
-```json
-{
-  "mcpServers": {
-    "excelsior-prompt-library": {
-      "url": "https://jules-excelsior.github.io/Excelsior-Prompt-Library/api/mcp"
-    }
-  }
-}
-```
-
-**Local:**
-```json
-{
-  "mcpServers": {
-    "Excelsior-Prompt-Library": {
-      "command": "npx",
-      "args": ["-y", "excelsior-prompt-library", "mcp"]
-    }
-  }
-}
-```
-
-📖 [MCP Documentation](https://jules-excelsior.github.io/Excelsior-Prompt-Library/docs/api)
+**[Read it here →](https://fka.gumroad.com/l/art-of-chatgpt-prompting)**
 
 ---
 
@@ -185,7 +107,6 @@ Use Excelsior-Prompt-Library as an MCP server in your AI tools.
 </p>
 
 <p align="center">
-  <sub>Built with <a href="https://windsurf.com">Windsurf</a> and <a href="https://devin.ai">Devin</a></sub><br>
   <a href="https://github.com/sponsors/jules-excelsior"><strong>Become a Sponsor →</strong></a>
 </p>
 
@@ -201,4 +122,4 @@ Use Excelsior-Prompt-Library as an MCP server in your AI tools.
 
 ## 📜 License
 
-**[CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)** — Copy, modify, distribute, and use freely. No attribution required.
+**[CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)** — Free to copy, modify, and use. No attribution required.
