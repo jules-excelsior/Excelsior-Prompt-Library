@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/jules-excelsior/Excelsior-Prompt-Library/blob/main/PROMPTS.md">🌐 Browse Prompts</a> •
+  <a href="https://jules-excelsior.github.io/Excelsior-Prompt-Library/prompts.html">🌐 Browse Prompts</a> •
   <a href="https://fka.gumroad.com/l/art-of-chatgpt-prompting">📖 Read the Book</a> •
   <a href="https://github.com/jules-excelsior/Excelsior-Prompt-Library">📄 View on GitHub</a> •
   <a href="#-self-hosting">🚀 Self-Host</a>
