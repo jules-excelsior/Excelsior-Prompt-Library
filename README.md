@@ -1,15 +1,12 @@
 <p align="center">
   <a href="https://jules-excelsior.github.io/Excelsior-Prompt-Library/">
-    <img width="800" alt="Excelsior Prompt Library" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/Excelsior_Prompt_Library.png">
+    <img width="800" alt="Excelsior Prompt Library" src="https://jules-excelsior.github.io/Excelsior-Prompt-Library/Excelsior_Prompt_Library.png">
   </a>
 </p>
 
 <p align="center">
-  <strong>The world's largest open-source prompt library for AI</strong><br>
+  <strong>AI Prompts for Business Systems and Operations</strong><br>
   <sub>Works with ChatGPT, Claude, Gemini, Llama, Mistral, and more</sub>
-</p>
-<p align="center">
-  <sub>formerly known as Awesome ChatGPT Prompts</sub>
 </p>
 
 <p align="center">
@@ -19,9 +16,9 @@
 </p>
 
 <p align="center">
-  <a href="https://jules-excelsior.github.io/Excelsior-Prompt-Library/prompts">🌐 Browse Prompts</a> •
+  <a href="https://github.com/jules-excelsior/Excelsior-Prompt-Library/blob/main/PROMPTS.md">🌐 Browse Prompts</a> •
   <a href="https://fka.gumroad.com/l/art-of-chatgpt-prompting">📖 Read the Book</a> •
-  <a href="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/PROMPTS.md">📄 View on GitHub</a> •
+  <a href="https://github.com/jules-excelsior/Excelsior-Prompt-Library">📄 View on GitHub</a> •
   <a href="#-self-hosting">🚀 Self-Host</a>
 </p>
 
@@ -32,7 +29,7 @@
     📄 <a href="https://scholar.google.com/citations?user=AZ0Dg8YAAAAJ&hl=en">40+ academic citations</a> · 
     ❤️ <a href="https://huggingface.co/datasets/fka/excelsior-prompt-library">Most liked dataset</a> on Hugging Face<br>
     ⭐ 143k+ GitHub stars · 
-    🏅 <a href="https://spotlights-feed.github.com/spotlights/excelsior-prompt-library/index/">GitHub Staff Pick</a> · 
+    🏅 GitHub Staff Pick · 
     🚀 First prompt library (Dec 2022)
   </sub>
 </p>
@@ -51,14 +48,14 @@
 
 ## What is this?
 
-A curated collection of **prompt examples** for AI chat models. Originally created for ChatGPT, these prompts work great with any modern AI assistant.
+A curated collection of **prompt examples** for AI chat models. Works great with any modern AI assistant.
 
 | Browse Prompts | Data Formats |
 |----------------|--------------|
-| [Excelsior-Prompt-Library](https://jules-excelsior.github.io/Excelsior-Prompt-Library/prompts) | [prompts.csv](prompts.csv) |
-| [PROMPTS.md](https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/PROMPTS.md) | [Hugging Face Dataset](https://huggingface.co/datasets/fka/excelsior-prompt-library) |
+| [PROMPTS.md](https://github.com/jules-excelsior/Excelsior-Prompt-Library/blob/main/PROMPTS.md) | [prompts.csv](prompts.csv) |
+| [GitHub Repository](https://github.com/jules-excelsior/Excelsior-Prompt-Library) | [Hugging Face Dataset](https://huggingface.co/datasets/fka/excelsior-prompt-library) |
 
-**Want to contribute?** Add prompts at [excelsior-prompt-library/prompts/new](https://jules-excelsior.github.io/Excelsior-Prompt-Library/prompts/new) — they sync here automatically.
+**Want to contribute?** Open an issue or pull request on [GitHub](https://github.com/jules-excelsior/Excelsior-Prompt-Library/issues/new) — contributions are welcome!
 
 ---
 
@@ -67,26 +64,6 @@ A curated collection of **prompt examples** for AI chat models. Originally creat
 Learn prompt engineering with our **free, interactive guide** — 25+ chapters covering everything from basics to advanced techniques like chain-of-thought reasoning, few-shot learning, and AI agents.
 
 **[Start Reading →](https://fka.gumroad.com/l/art-of-chatgpt-prompting)**
-
----
-
-## 🎮 Prompting for Kids
-
-<p>
-  <a href="https://jules-excelsior.github.io/Excelsior-Prompt-Library/kids">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://jules-excelsior.github.io/Excelsior-Prompt-Library/promi-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://jules-excelsior.github.io/Excelsior-Prompt-Library/promi.svg">
-      <img height="60" alt="Promi" src="https://jules-excelsior.github.io/Excelsior-Prompt-Library/promi.svg" align="left">
-    </picture>
-  </a>
-</p>
-
-An interactive, game-based adventure to teach children (ages 8-14) how to communicate with AI through fun puzzles and stories.
-
-**[Start Playing →](https://jules-excelsior.github.io/Excelsior-Prompt-Library/kids)**
-
-<br clear="left">
 
 ---
 
@@ -103,7 +80,7 @@ cd my-prompt-library
 **Manual Setup:**
 ```bash
 git clone https://github.com/jules-excelsior/Excelsior-Prompt-Library.git
-cd excelsior-prompt-library
+cd Excelsior-Prompt-Library
 npm install && npm run setup
 ```
 
@@ -122,13 +99,13 @@ npx excelsior-prompt-library
 
 ### Claude Code Plugin
 ```
-/plugin marketplace add f/excelsior-prompt-library
+/plugin marketplace add jules-excelsior/Excelsior-Prompt-Library
 /plugin install excelsior-prompt-library@excelsior-prompt-library
 ```
 📖 [Plugin Documentation](CLAUDE-PLUGIN.md)
 
 ### MCP Server
-Use excelsior-prompt-library as an MCP server in your AI tools.
+Use Excelsior-Prompt-Library as an MCP server in your AI tools.
 
 **Remote (recommended):**
 ```json
@@ -160,7 +137,6 @@ Use excelsior-prompt-library as an MCP server in your AI tools.
 ## 💖 Sponsors
 
 <p align="center">
-  <!-- Clemta -->
   <a href="https://clemta.com/?utm_source=excelsior-prompt-library">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/clemta-dark.webp">
@@ -168,19 +144,16 @@ Use excelsior-prompt-library as an MCP server in your AI tools.
       <img height="35" alt="Clemta" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/clemta.webp">
     </picture>
   </a>&nbsp;&nbsp;
-  <!-- Wiro (py-1) -->
   <a href="https://wiro.ai/?utm_source=excelsior-prompt-library">
     <img height="30" alt="Wiro" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/wiro.png">
   </a>&nbsp;&nbsp;
-  <!-- Cognition -->
-  <a href="https://wind.surf/excelsior-prompt-library">
+  <a href="https://windsurf.com">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/cognition-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/cognition.svg">
       <img height="35" alt="Cognition" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/cognition.svg">
     </picture>
   </a>&nbsp;&nbsp;
-  <!-- CodeRabbit (py-1) -->
   <a href="https://coderabbit.link/fatih">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/coderabbit-dark.svg">
@@ -188,7 +161,6 @@ Use excelsior-prompt-library as an MCP server in your AI tools.
       <img height="30" alt="CodeRabbit" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/coderabbit.svg">
     </picture>
   </a>&nbsp;&nbsp;
-  <!-- Sentry (py-1) -->
   <a href="https://sentry.io/?utm_source=excelsior-prompt-library">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/sentry-dark.svg">
@@ -196,7 +168,6 @@ Use excelsior-prompt-library as an MCP server in your AI tools.
       <img height="30" alt="Sentry" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/sentry.svg">
     </picture>
   </a>&nbsp;&nbsp;
-  <!-- Each Labs (py-[6px]) -->
   <a href="https://www.eachlabs.ai/?utm_source=excelsior-prompt-library&utm_medium=referral">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/eachlabs-dark.png">
@@ -204,7 +175,6 @@ Use excelsior-prompt-library as an MCP server in your AI tools.
       <img height="28" alt="Each Labs" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/eachlabs.png">
     </picture>
   </a>&nbsp;&nbsp;
-  <!-- CommandCode (py-1) -->
   <a href="https://commandcode.ai/?utm_source=excelsior-prompt-library">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/commandcode-dark.svg">
@@ -215,8 +185,8 @@ Use excelsior-prompt-library as an MCP server in your AI tools.
 </p>
 
 <p align="center">
-  <sub>Built with <a href="https://wind.surf/excelsior-prompt-library">Windsurf</a> and <a href="https://devin.ai">Devin</a></sub><br>
-  <a href="https://github.com/sponsors/f/sponsorships?sponsor=f&tier_id=558224&preview=false"><strong>Become a Sponsor →</strong></a>
+  <sub>Built with <a href="https://windsurf.com">Windsurf</a> and <a href="https://devin.ai">Devin</a></sub><br>
+  <a href="https://github.com/sponsors/jules-excelsior"><strong>Become a Sponsor →</strong></a>
 </p>
 
 ---
@@ -224,7 +194,7 @@ Use excelsior-prompt-library as an MCP server in your AI tools.
 ## 👥 Contributors
 
 <a href="https://github.com/jules-excelsior/Excelsior-Prompt-Library/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=f/excelsior-prompt-library" />
+  <img src="https://contrib.rocks/image?repo=jules-excelsior/Excelsior-Prompt-Library" />
 </a>
 
 ---
