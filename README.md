@@ -5,8 +5,6 @@
       <source media="(prefers-color-scheme: light)" srcset="https://Excelsior-Prompt-Library/logo.svg">
       <img height="60" alt="Excelsior-Prompt-Library" src="https://Excelsior-Prompt-Library/logo.svg">
     </picture>
-    <br>
-    excelsior-prompt-library
   </a>
 </h1>
 
