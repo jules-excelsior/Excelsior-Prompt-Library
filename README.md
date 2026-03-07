@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://jules-excelsior.github.io/Excelsior-Prompt-Library/">
-    <img width="800" alt="Excelsior Prompt Library" src="./Excelsior_Prompt_Library.png">
+    <img width="800" alt="Excelsior Prompt Library" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/Excelsior_Prompt_Library.png">
   </a>
 </p>
 
@@ -13,7 +13,6 @@
 </p>
 
 <p align="center">
-  <a href="https://jules-excelsior.github.io/Excelsior-Prompt-Library/"><img src="https://img.shields.io/badge/Website-excelsior--prompt--library-blue?style=flat-square" alt="Website"></a>
   <a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"></a>
   <a href="https://huggingface.co/datasets/fka/excelsior-prompt-library"><img src="https://img.shields.io/badge/🤗-Hugging_Face-yellow?style=flat-square" alt="Hugging Face"></a>
   <a href="https://deepwiki.com/f/excelsior-prompt-library"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
@@ -22,7 +21,7 @@
 <p align="center">
   <a href="https://jules-excelsior.github.io/Excelsior-Prompt-Library/prompts">🌐 Browse Prompts</a> •
   <a href="https://fka.gumroad.com/l/art-of-chatgpt-prompting">📖 Read the Book</a> •
-  <a href="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/PROMPTS.md">📄 View on GitHub</a> •
+  <a href="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/PROMPTS.md">📄 View on GitHub</a> •
   <a href="#-self-hosting">🚀 Self-Host</a>
 </p>
 
@@ -57,7 +56,7 @@ A curated collection of **prompt examples** for AI chat models. Originally creat
 | Browse Prompts | Data Formats |
 |----------------|--------------|
 | [Excelsior-Prompt-Library](https://jules-excelsior.github.io/Excelsior-Prompt-Library/prompts) | [prompts.csv](prompts.csv) |
-| [PROMPTS.md](https://raw.githubusercontent.com/f/excelsior-prompt-library/main/PROMPTS.md) | [Hugging Face Dataset](https://huggingface.co/datasets/fka/excelsior-prompt-library) |
+| [PROMPTS.md](https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/PROMPTS.md) | [Hugging Face Dataset](https://huggingface.co/datasets/fka/excelsior-prompt-library) |
 
 **Want to contribute?** Add prompts at [excelsior-prompt-library/prompts/new](https://jules-excelsior.github.io/Excelsior-Prompt-Library/prompts/new) — they sync here automatically.
 
@@ -103,7 +102,7 @@ cd my-prompt-library
 
 **Manual Setup:**
 ```bash
-git clone https://github.com/f/excelsior-prompt-library.git
+git clone https://github.com/jules-excelsior/Excelsior-Prompt-Library.git
 cd excelsior-prompt-library
 npm install && npm run setup
 ```
@@ -164,53 +163,53 @@ Use excelsior-prompt-library as an MCP server in your AI tools.
   <!-- Clemta -->
   <a href="https://clemta.com/?utm_source=excelsior-prompt-library">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/clemta-dark.webp">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/clemta.webp">
-      <img height="35" alt="Clemta" src="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/clemta.webp">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/clemta-dark.webp">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/clemta.webp">
+      <img height="35" alt="Clemta" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/clemta.webp">
     </picture>
   </a>&nbsp;&nbsp;
   <!-- Wiro (py-1) -->
   <a href="https://wiro.ai/?utm_source=excelsior-prompt-library">
-    <img height="30" alt="Wiro" src="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/wiro.png">
+    <img height="30" alt="Wiro" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/wiro.png">
   </a>&nbsp;&nbsp;
   <!-- Cognition -->
   <a href="https://wind.surf/excelsior-prompt-library">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/cognition-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/cognition.svg">
-      <img height="35" alt="Cognition" src="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/cognition.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/cognition-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/cognition.svg">
+      <img height="35" alt="Cognition" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/cognition.svg">
     </picture>
   </a>&nbsp;&nbsp;
   <!-- CodeRabbit (py-1) -->
   <a href="https://coderabbit.link/fatih">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/coderabbit-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/coderabbit.svg">
-      <img height="30" alt="CodeRabbit" src="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/coderabbit.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/coderabbit-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/coderabbit.svg">
+      <img height="30" alt="CodeRabbit" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/coderabbit.svg">
     </picture>
   </a>&nbsp;&nbsp;
   <!-- Sentry (py-1) -->
   <a href="https://sentry.io/?utm_source=excelsior-prompt-library">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/sentry-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/sentry.svg">
-      <img height="30" alt="Sentry" src="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/sentry.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/sentry-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/sentry.svg">
+      <img height="30" alt="Sentry" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/sentry.svg">
     </picture>
   </a>&nbsp;&nbsp;
   <!-- Each Labs (py-[6px]) -->
   <a href="https://www.eachlabs.ai/?utm_source=excelsior-prompt-library&utm_medium=referral">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/eachlabs-dark.png">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/eachlabs.png">
-      <img height="28" alt="Each Labs" src="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/eachlabs.png">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/eachlabs-dark.png">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/eachlabs.png">
+      <img height="28" alt="Each Labs" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/eachlabs.png">
     </picture>
   </a>&nbsp;&nbsp;
   <!-- CommandCode (py-1) -->
   <a href="https://commandcode.ai/?utm_source=excelsior-prompt-library">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/commandcode-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/commandcode.svg">
-      <img height="30" alt="CommandCode" src="https://raw.githubusercontent.com/f/excelsior-prompt-library/main/public/sponsors/commandcode.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/commandcode-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/commandcode.svg">
+      <img height="30" alt="CommandCode" src="https://raw.githubusercontent.com/jules-excelsior/Excelsior-Prompt-Library/main/public/sponsors/commandcode.svg">
     </picture>
   </a>
 </p>
@@ -224,7 +223,7 @@ Use excelsior-prompt-library as an MCP server in your AI tools.
 
 ## 👥 Contributors
 
-<a href="https://github.com/f/excelsior-prompt-library/graphs/contributors">
+<a href="https://github.com/jules-excelsior/Excelsior-Prompt-Library/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=f/excelsior-prompt-library" />
 </a>
 
