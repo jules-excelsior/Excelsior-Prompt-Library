@@ -1,11 +1,5 @@
 <h1 align="center">
-  <a href="https://Excelsior-Prompt-Library">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://Excelsior-Prompt-Library/logo-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://Excelsior-Prompt-Library/logo.svg">
-      <img height="60" alt="Excelsior-Prompt-Library" src="https://Excelsior-Prompt-Library/logo.svg">
-    </picture>
-  </a>
+  <a href="https://jules-excelsior.github.io/Excelsior-Prompt-Library/">Excelsior-Prompt-Library</a>
 </h1>
 
 <p align="center">
