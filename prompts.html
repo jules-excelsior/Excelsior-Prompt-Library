@@ -3,6 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var isIframe = window.self !== window.top;
+      var isAllowedOrigin = false;
+      try { isAllowedOrigin = document.referrer.indexOf('excelsiorblueprint.com') !== -1; } catch (e) {}
+      if (!isIframe && !isAllowedOrigin) {
+        window.location.replace('https://excelsiorblueprint.com/signup');
+      }
+    })();
+  </script>
   <title>Excelsior AI Prompt Library</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
