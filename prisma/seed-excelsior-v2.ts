@@ -35,7 +35,7 @@ async function main() {
   const admin = await prisma.user.create({
     data: {
       name: "Excelsior Admin",
-      email: "admin@excelsior.com",
+      email: "excelsiorconsultancys@gmail.com",
       username: "excelsior-admin",
       password: hashedPassword,
       role: "ADMIN",
@@ -2815,7 +2815,7 @@ Act as a Senior HR Business Partner in the Philippines specializing in grievance
   console.log(`✓ Created ${count} structured prompts`);
   console.log("\n🎉 Excelsior Prompt Library v2 seeded successfully!");
   console.log("─────────────────────────────────────────────────");
-  console.log(`   Admin:      admin@excelsior.com`);
+  console.log(`   Admin:      excelsiorconsultancys@gmail.com`);
   console.log(`   Password:   ExcelsiorAdmin2025!`);
   console.log(`   Categories: ${categoryData.length}`);
   console.log(`   Prompts:    ${count}`);
