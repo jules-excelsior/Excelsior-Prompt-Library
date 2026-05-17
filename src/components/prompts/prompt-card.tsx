@@ -15,6 +15,7 @@ import { VariableFillModal, hasVariables, renderContentWithVariables } from "@/c
 import { ExamplesSlider } from "@/components/prompts/examples-slider";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { AudioPlayer } from "@/components/prompts/audio-player";
+import { useGuestPromptGate } from "@/hooks/use-guest-prompt-gate";
 import {
   Tooltip,
   TooltipContent,
@@ -90,6 +91,7 @@ export function PromptCard({ prompt, showPinButton = false, isPinned = false }: 
   const t = useTranslations("prompts");
   const tCommon = useTranslations("common");
   const _locale = useLocale();
+  const { checkGate } = useGuestPromptGate();
   const outgoingCount = prompt._count?.outgoingConnections || 0;
   const incomingCount = prompt._count?.incomingConnections || 0;
   const isFlowStart = outgoingCount > 0 && incomingCount === 0;
@@ -139,6 +141,7 @@ export function PromptCard({ prompt, showPinButton = false, isPinned = false }: 
   };
 
   const handleCopyClick = () => {
+    if (!checkGate()) return;
     if (contentHasVariables) {
       setModalMode("copy");
       setModalOpen(true);
@@ -148,6 +151,7 @@ export function PromptCard({ prompt, showPinButton = false, isPinned = false }: 
   };
 
   const handleRunClick = () => {
+    if (!checkGate()) return;
     setModalMode("run");
     setModalOpen(true);
   };
@@ -401,16 +405,17 @@ export function PromptCard({ prompt, showPinButton = false, isPinned = false }: 
                 <Play className="h-4 w-4" />
               </button>
             ) : (
-              <RunPromptButton 
+              <RunPromptButton
                 content={prompt.content}
                 title={prompt.title}
                 description={prompt.description || undefined}
-                size="icon" 
-                variant="ghost" 
+                size="icon"
+                variant="ghost"
                 className="h-6 w-6"
                 categoryName={prompt.category?.name}
                 parentCategoryName={prompt.category?.parent?.name}
                 promptType={prompt.type as "TEXT" | "IMAGE" | "VIDEO" | "AUDIO" | "STRUCTURED" | "SKILL"}
+                onBeforeRun={checkGate}
               />
             )}
           </div>

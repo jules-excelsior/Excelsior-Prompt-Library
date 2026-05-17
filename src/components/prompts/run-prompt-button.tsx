@@ -213,6 +213,7 @@ interface RunPromptButtonProps {
   parentCategoryName?: string;
   emphasized?: boolean;
   promptType?: "TEXT" | "IMAGE" | "VIDEO" | "AUDIO" | "STRUCTURED" | "SKILL";
+  onBeforeRun?: () => boolean;
 }
 
 // Check if category or parent category suggests code-related content
@@ -229,11 +230,11 @@ function getDefaultTab(categoryName?: string, parentCategoryName?: string): "cha
   return "chat";
 }
 
-export function RunPromptButton({ 
-  content, 
+export function RunPromptButton({
+  content,
   title,
   description,
-  variant = "outline", 
+  variant = "outline",
   size = "sm",
   className,
   unfilledVariables = [],
@@ -243,7 +244,8 @@ export function RunPromptButton({
   categoryName,
   parentCategoryName,
   emphasized = false,
-  promptType = "TEXT"
+  promptType = "TEXT",
+  onBeforeRun,
 }: RunPromptButtonProps) {
   const t = useTranslations("prompts");
   const tCommon = useTranslations("common");
@@ -296,6 +298,7 @@ export function RunPromptButton({
   }, [variableValues, onVariablesFilled, pendingPlatform, getContentWithVariables, content, promptId]);
 
   const handleRun = (platform: Platform, baseUrl: string) => {
+    if (onBeforeRun && !onBeforeRun()) return;
     // Check if there are any variables to fill
     const hasVariables = unfilledVariables.length > 0;
     

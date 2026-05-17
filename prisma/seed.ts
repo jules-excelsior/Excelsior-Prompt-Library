@@ -241,7 +241,7 @@ async function main() {
           title: remotePrompt.title,
           slug: remotePrompt.slug,
           description: remotePrompt.description,
-          content: remotePrompt.content,
+          content: remotePrompt.content ?? remotePrompt.description ?? remotePrompt.title,
           type: promptType,
           structuredFormat: structuredFormat,
           mediaUrl: remotePrompt.mediaUrl,
@@ -266,7 +266,7 @@ async function main() {
         data: {
           promptId: prompt.id,
           version: 1,
-          content: remotePrompt.content,
+          content: remotePrompt.content ?? remotePrompt.description ?? remotePrompt.title,
           changeNote: "Initial version",
           createdBy: authorId,
         },

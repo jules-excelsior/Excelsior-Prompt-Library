@@ -11,6 +11,9 @@ const withMDX = createMDX({
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   reactCompiler: true,
+  turbopack: {
+    root: __dirname,
+  },
   // Configure webpack for raw imports
   webpack: (config) => {
     config.module.rules.push({
