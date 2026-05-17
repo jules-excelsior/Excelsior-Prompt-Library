@@ -2383,13 +2383,21 @@ Quote to include from: [EXECUTIVE NAME AND TITLE]`,
 async function main() {
   console.log("🌱 Seeding Excelsior Prompt Library...");
 
-  // Clear existing data
+  // Clear existing data (order matters for foreign key constraints)
   console.log("🗑️  Clearing existing prompts, categories, and tags...");
-  await prisma.promptVersion.deleteMany();
-  await prisma.promptTag.deleteMany();
-  await prisma.vote.deleteMany();
+  await prisma.commentVote.deleteMany();
   await prisma.comment.deleteMany();
+  await prisma.promptVote.deleteMany();
+  await prisma.promptReport.deleteMany();
+  await prisma.userPromptExample.deleteMany();
+  await prisma.pinnedPrompt.deleteMany();
+  await prisma.changeRequest.deleteMany();
+  await prisma.notification.deleteMany();
+  await prisma.promptConnection.deleteMany();
+  await prisma.promptTag.deleteMany();
+  await prisma.promptVersion.deleteMany();
   await prisma.prompt.deleteMany();
+  await prisma.categorySubscription.deleteMany();
   await prisma.category.deleteMany();
   await prisma.tag.deleteMany();
   console.log("✅ Cleared existing data");
