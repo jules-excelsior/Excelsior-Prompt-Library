@@ -1,7 +1,10 @@
+import "dotenv/config";
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient({
+  datasources: { db: { url: process.env.DIRECT_URL || process.env.DATABASE_URL } },
+});
 
 async function main() {
   console.log("🌱 Seeding Excelsior Prompt Library v2 — Structured OS Edition...");
@@ -79,7 +82,7 @@ async function main() {
   ];
   const tagMap: Record<string, string> = {};
   for (const name of tagNames) {
-    const t = await prisma.tag.create({ data: { name } });
+    const t = await prisma.tag.create({ data: { name, slug: name } });
     tagMap[name] = t.id;
   }
   console.log(`✓ Created ${tagNames.length} tags`);
@@ -92,16 +95,17 @@ async function main() {
     categorySlug: string;
     tags: string[];
   }) {
+    const slug = d.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") + "-" + Date.now();
     return prisma.prompt.create({
       data: {
         title: d.title,
+        slug,
         description: d.description,
         content: d.content,
-        userId: admin.id,
+        authorId: admin.id,
         categoryId: catMap[d.categorySlug],
-        isPublic: true,
-        status: "approved",
-        promptTags: {
+        isFeatured: false,
+        tags: {
           create: d.tags.filter(t => tagMap[t]).map(t => ({ tagId: tagMap[t] })),
         },
       },
