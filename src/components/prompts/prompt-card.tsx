@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { getPromptUrl } from "@/lib/urls";
-import { ArrowBigUp, Lock, Copy, ImageIcon, Download, Play, BadgeCheck, Volume2, Link2 } from "lucide-react";
+import { ArrowBigUp, Lock, Copy, ImageIcon, Download, Play, Volume2, Link2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { CodeView } from "@/components/ui/code-view";
 import { toast } from "sonner";
@@ -13,14 +13,8 @@ import { PinButton } from "@/components/prompts/pin-button";
 import { RunPromptButton } from "@/components/prompts/run-prompt-button";
 import { VariableFillModal, hasVariables, renderContentWithVariables } from "@/components/prompts/variable-fill-modal";
 import { ExamplesSlider } from "@/components/prompts/examples-slider";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { AudioPlayer } from "@/components/prompts/audio-player";
 import { useGuestPromptGate } from "@/hooks/use-guest-prompt-gate";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
 export interface PromptCardProps {
   prompt: {
@@ -337,47 +331,7 @@ export function PromptCard({ prompt, showPinButton = false, isPinned = false }: 
         )}
 
         {/* Footer */}
-        <div className="flex items-center justify-between text-[11px] text-muted-foreground pt-2 border-t mt-auto">
-          <div className="flex items-center gap-1.5">
-            <Link href={`/@${prompt.author.username}`} prefetch={false} className="hover:text-foreground flex items-center gap-1.5">
-              <Avatar className="h-4 w-4">
-                <AvatarImage src={prompt.author.avatar || undefined} alt={prompt.author.username} />
-                <AvatarFallback className="text-[8px]">{prompt.author.username[0]?.toUpperCase()}</AvatarFallback>
-              </Avatar>
-              @{prompt.author.username}
-              {prompt.author.verified && <BadgeCheck className="h-3 w-3 mt-0.5 text-primary shrink-0" />}
-            </Link>
-            {prompt.contributors && prompt.contributors.length > 0 ? (
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <span className="cursor-default hover:text-foreground">+{prompt.contributors.length}</span>
-                </TooltipTrigger>
-                <TooltipContent side="top" className="p-2">
-                  <div className="space-y-1">
-                    <div className="text-xs font-medium mb-1.5">{t("promptContributors")}</div>
-                    {prompt.contributors.map((contributor) => (
-                      <Link
-                        key={contributor.id}
-                        href={`/@${contributor.username}`}
-                        prefetch={false}
-                        className="flex items-center gap-2 hover:underline rounded px-1 py-0.5 -mx-1"
-                      >
-                        <Avatar className="h-4 w-4">
-                          <AvatarImage src={contributor.avatar || undefined} />
-                          <AvatarFallback className="text-[8px]">
-                            {contributor.name?.charAt(0) || contributor.username.charAt(0)}
-                          </AvatarFallback>
-                        </Avatar>
-                        <span className="text-xs">@{contributor.username}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            ) : prompt.contributorCount ? (
-              <span>+{prompt.contributorCount}</span>
-            ) : null}
-          </div>
+        <div className="flex items-center justify-end text-[11px] text-muted-foreground pt-2 border-t mt-auto">
           <div className="flex items-center gap-2">
             <span className="flex items-center gap-0.5">
               <ArrowBigUp className="h-3.5 w-3.5" />
