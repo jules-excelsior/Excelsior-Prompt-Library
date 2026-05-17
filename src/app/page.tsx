@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { ArrowRight, Star, Heart, Trophy, Users, HeartHandshake, Code, Lock, Building2, Github, GraduationCap, LogIn, Rocket, Quote, History, Sparkles, Zap, Briefcase, CheckCircle, BookOpen } from "lucide-react";
+import { ArrowRight, Star, Heart, Trophy, Users, HeartHandshake, Code, Lock, Building2, Github, GraduationCap, LogIn, Rocket, Quote, History } from "lucide-react";
 import { auth } from "@/lib/auth";
 import { getConfig } from "@/lib/config";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,7 @@ import { CliCommand } from "@/components/layout/cli-command";
 import { ExtensionLink } from "@/components/layout/extension-link";
 import { AnimatedText } from "@/components/layout/animated-text";
 import { SponsorLink, BecomeSponsorLink, BuiltWithLink } from "@/components/layout/sponsor-link";
+import { ExcelsiorHero, ExcelsiorFeatures, ExcelsiorRegisterCTA } from "@/components/layout/excelsior-landing";
 
 function getOrdinalSuffix(n: number): string {
   const s = ["th", "st", "nd", "rd"];
@@ -50,7 +51,18 @@ export default async function HomePage() {
   // Show landing page for all users
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
+      {/* iOS-style animated hero — Excelsior brand */}
+      {useCloneBranding && (
+        <ExcelsiorHero
+          brandName={config.branding.name}
+          description={config.branding.description || "Battle-tested AI prompts for business, operations, and growth — curated and ready to deploy."}
+          showRegister={showRegisterButton}
+          isOAuth={isOAuth}
+        />
+      )}
+
+      {/* Original hero — non-Excelsior branding */}
+      {!useCloneBranding && (
       <section className="relative py-12 md:py-16 border-b overflow-hidden">
         {/* Background - Right Side */}
         {useCloneBranding ? (
@@ -282,6 +294,7 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+      )} {/* end !useCloneBranding hero */}
 
       {/* Sponsors Section */}
       {config.homepage?.sponsors?.enabled && config.homepage.sponsors.items.length > 0 && (
@@ -516,46 +529,8 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* Why Excelsior — clone branding only */}
-      {useCloneBranding && (
-        <section className="py-14 border-b">
-          <div className="container">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl font-bold tracking-tight">Why use Excelsior Prompt Library?</h2>
-              <p className="mt-2 text-muted-foreground max-w-lg mx-auto">Everything you need to get more done with AI — organized, tested, and ready to deploy.</p>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-3">
-              <div className="flex flex-col gap-3 p-6 rounded-lg border bg-muted/30">
-                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <BookOpen className="h-5 w-5 text-primary" />
-                </div>
-                <h3 className="font-semibold">Expert-Curated</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Every prompt is tested and refined for real business use — no filler, no fluff, just results.
-                </p>
-              </div>
-              <div className="flex flex-col gap-3 p-6 rounded-lg border bg-muted/30">
-                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Zap className="h-5 w-5 text-primary" />
-                </div>
-                <h3 className="font-semibold">Deploy in Seconds</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  One click copies to your clipboard. Paste straight into ChatGPT, Claude, or any AI tool and go.
-                </p>
-              </div>
-              <div className="flex flex-col gap-3 p-6 rounded-lg border bg-muted/30">
-                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Briefcase className="h-5 w-5 text-primary" />
-                </div>
-                <h3 className="font-semibold">Built for Business</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  From sales to operations to strategy — prompts organized around how your business actually works.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Animated feature cards — Excelsior brand only */}
+      {useCloneBranding && <ExcelsiorFeatures />}
 
       {/* Featured & Latest Prompts Section */}
       <DiscoveryPrompts isHomepage />
@@ -597,46 +572,8 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* Excelsior register CTA — clone branding, guests only */}
-      {useCloneBranding && !session && (
-        <section className="py-14">
-          <div className="container">
-            <div className="relative overflow-hidden rounded-2xl border bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-                <div>
-                  <h2 className="text-2xl font-bold tracking-tight">Ready to work smarter with AI?</h2>
-                  <p className="mt-2 text-muted-foreground max-w-md">
-                    Create a free account to save prompts, build your personal library, and get full access to the Excelsior collection.
-                  </p>
-                  <ul className="mt-5 flex flex-col gap-2">
-                    {[
-                      "Save and pin your favourite prompts",
-                      "Contribute your own prompt templates",
-                      "Unlimited access — use as many prompts as you like",
-                    ].map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <CheckCircle className="h-4 w-4 text-green-500 shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="flex flex-col gap-3 shrink-0">
-                  <Button size="lg" asChild>
-                    <Link href="/register">
-                      Create Free Account
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                  <Button variant="outline" size="lg" asChild>
-                    <Link href="/login">Sign In</Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Animated register CTA — Excelsior brand, guests only */}
+      {useCloneBranding && !session && <ExcelsiorRegisterCTA />}
     </div>
   );
 }

@@ -206,54 +206,47 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
                   >
                     {t("nav.prompts")}
                   </Link>
-                  <Link 
-                    href="/skills" 
+                  <Link
+                    href="/skills"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                   >
                     {t("nav.skills")}
                   </Link>
-                  <Link 
-                    href="/taste" 
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                  >
-                    {t("nav.taste")}
-                  </Link>
-                  <Link 
-                    href="/workflows" 
+                  <Link
+                    href="/workflows"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                   >
                     {t("nav.workflows")}
                   </Link>
-                  <Link 
-                    href="/categories" 
+                  <Link
+                    href="/categories"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                   >
                     {t("nav.categories")}
                   </Link>
-                  <Link 
-                    href="/tags" 
+                  <Link
+                    href="/tags"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                   >
                     {t("nav.tags")}
                   </Link>
-                  <Link 
-                    href="/discover" 
+                  <Link
+                    href="/discover"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                   >
-                    {t("feed.discover")}
+                    {t("nav.discover")}
                   </Link>
-                  <Link 
-                    href="/promptmasters" 
+                  <Link
+                    href="/how_to_write_effective_prompts"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                   >
-                    {t("nav.promptmasters")}
+                    {t("nav.howToGuide")}
                   </Link>
                   {!branding.useCloneBranding && (
                     <Link 
@@ -382,18 +375,12 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
             {t("nav.skills")}
           </Link>
           <Link
-            href="/taste"
-            className="hidden xl:block px-3 py-1.5 rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-accent"
-          >
-            {t("nav.taste")}
-          </Link>
-          <Link
             href="/workflows"
             className="hidden xl:block px-3 py-1.5 rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-accent"
           >
             {t("nav.workflows")}
           </Link>
-          {/* Categories, Tags, Promptmasters - visible on lg+ screens */}
+          {/* Categories, Tags, Discover, How-to Guide - visible on 2xl+ screens */}
           <Link
             href="/categories"
             className="hidden 2xl:block px-3 py-1.5 rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-accent"
@@ -407,10 +394,16 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
             {t("nav.tags")}
           </Link>
           <Link
-            href="/promptmasters"
+            href="/discover"
             className="hidden 2xl:block px-3 py-1.5 rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-accent"
           >
-            {t("nav.promptmasters")}
+            {t("nav.discover")}
+          </Link>
+          <Link
+            href="/how_to_write_effective_prompts"
+            className="hidden 2xl:block px-3 py-1.5 rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-accent"
+          >
+            {t("nav.howToGuide")}
           </Link>
           {/* Three-dot dropdown for collapsed nav items */}
           <DropdownMenu>
@@ -424,11 +417,6 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
               <DropdownMenuItem asChild className="xl:hidden">
                 <Link href="/skills">
                   {t("nav.skills")}
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild className="xl:hidden">
-                <Link href="/taste">
-                  {t("nav.taste")}
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className="xl:hidden">
@@ -448,8 +436,13 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/promptmasters">
-                  {t("nav.promptmasters")}
+                <Link href="/discover">
+                  {t("nav.discover")}
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/how_to_write_effective_prompts">
+                  {t("nav.howToGuide")}
                 </Link>
               </DropdownMenuItem>
               {!branding.useCloneBranding && (
