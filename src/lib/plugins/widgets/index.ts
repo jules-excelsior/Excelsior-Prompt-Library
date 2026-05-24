@@ -1,14 +1,10 @@
 import type { WidgetPlugin, WidgetPrompt, WidgetContext } from "./types";
-import { coderabbitWidget } from "./coderabbit";
-import { commandcodeWidget } from "./commandcode";
 
 export * from "./types";
 
-// Registry of all widget plugins
-const widgetPlugins: WidgetPlugin[] = [
-  coderabbitWidget,
-  commandcodeWidget,
-];
+// No sponsored widgets in the Excelsior Prompt Library.
+// This library is a curated prompt resource — no ads, no sponsored placements.
+const widgetPlugins: WidgetPlugin[] = [];
 
 /**
  * Get all registered widget plugins
