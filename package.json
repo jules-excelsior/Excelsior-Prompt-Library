@@ -87,7 +87,7 @@
     "zod": "^4.1.13"
   },
   "prisma": {
-    "seed": "npx tsx prisma/seed.ts"
+    "seed": "npx tsx prisma/seed-excelsior-v2.ts"
   },
   "devDependencies": {
     "@clack/prompts": "^0.11.0",
