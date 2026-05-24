@@ -139,7 +139,7 @@ export function ExcelsiorHero({ brandName, description, showRegister, isOAuth }:
             {/* Floating badge */}
             <div className="exc-scale-pop mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full exc-glass border border-primary/25 text-xs font-semibold text-primary shadow-lg shadow-primary/10" style={{ animationDelay: "0ms" }}>
               <Sparkles className="h-3.5 w-3.5" />
-              52 Battle-tested Business Prompts
+              Battle-tested Business Prompts
             </div>
 
             {/* Headline */}

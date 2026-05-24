@@ -142,6 +142,7 @@ async function buildAuthConfig() {
   }
 
   return {
+    secret: process.env.AUTH_SECRET,
     adapter: CustomPrismaAdapter(),
     providers: authProviders,
     session: {

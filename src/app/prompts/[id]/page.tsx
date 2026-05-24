@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getTranslations, getLocale } from "next-intl/server";
 import { formatDistanceToNow } from "@/lib/date";
-import { Clock, Edit, History, GitPullRequest, Check, X, Users, ImageIcon, Video, FileText, Shield, Trash2, Cpu, Terminal, Wrench } from "lucide-react";
+import { Clock, Edit, History, GitPullRequest, Check, X, ImageIcon, Video, FileText, Shield, Trash2, Cpu, Terminal, Wrench } from "lucide-react";
 import { AnimatedDate } from "@/components/ui/animated-date";
 import { ShareDropdown } from "@/components/prompts/share-dropdown";
 import { auth } from "@/lib/auth";
@@ -370,64 +370,9 @@ export default async function PromptPage({ params }: PromptPageProps) {
 
       {/* Meta info */}
       <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
-        <div className="flex items-center gap-2">
-          <div className="flex -space-x-2">
-            <Link href={`/@${prompt.author.username}`} title={`@${prompt.author.username}`}>
-              <Avatar className="h-6 w-6 border-2 border-background">
-                <AvatarImage src={prompt.author.avatar || undefined} />
-                <AvatarFallback className="text-xs">{prompt.author.name?.charAt(0) || prompt.author.username.charAt(0)}</AvatarFallback>
-              </Avatar>
-            </Link>
-            {prompt.contributors.map((contributor) => (
-              <Link key={contributor.id} href={`/@${contributor.username}`} title={`@${contributor.username}`}>
-                <Avatar className="h-6 w-6 border-2 border-background">
-                  <AvatarImage src={contributor.avatar || undefined} />
-                  <AvatarFallback className="text-xs">{contributor.name?.charAt(0) || contributor.username.charAt(0)}</AvatarFallback>
-                </Avatar>
-              </Link>
-            ))}
-          </div>
-          {prompt.contributors.length > 0 ? (
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <span className="cursor-default">
-                  <Link href={`/@${prompt.author.username}`} className="hover:underline">@{prompt.author.username}</Link> +{prompt.contributors.length}
-                </span>
-              </TooltipTrigger>
-              <TooltipContent side="bottom" className="p-2">
-                <div className="space-y-1">
-                  <div className="text-xs font-medium mb-1.5">{t("promptContributors")}</div>
-                  {prompt.contributors.map((contributor) => (
-                    <Link
-                      key={contributor.id}
-                      href={`/@${contributor.username}`}
-                      className="flex items-center gap-2 hover:underline rounded px-1 py-0.5 -mx-1"
-                    >
-                      <Avatar className="h-4 w-4">
-                        <AvatarImage src={contributor.avatar || undefined} />
-                        <AvatarFallback className="text-[8px]">
-                          {contributor.name?.charAt(0) || contributor.username.charAt(0)}
-                        </AvatarFallback>
-                      </Avatar>
-                      <span className="text-xs">@{contributor.username}</span>
-                    </Link>
-                  ))}
-                </div>
-              </TooltipContent>
-            </Tooltip>
-          ) : (
-            <Link href={`/@${prompt.author.username}`} className="hover:underline">@{prompt.author.username}</Link>
-          )}
-        </div>
-        {prompt.contributors.length > 0 && (
-          <div className="flex items-center gap-1.5">
-            <Users className="h-4 w-4" />
-            <span>{prompt.contributors.length + 1} {t("contributors")}</span>
-          </div>
-        )}
-        <AnimatedDate 
-          date={prompt.createdAt} 
-          relativeText={formatDistanceToNow(prompt.createdAt, locale)} 
+        <AnimatedDate
+          date={prompt.createdAt}
+          relativeText={formatDistanceToNow(prompt.createdAt, locale)}
           locale={locale}
         />
       </div>

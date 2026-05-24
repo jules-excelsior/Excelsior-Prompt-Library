@@ -12,6 +12,7 @@ import { ExtensionLink } from "@/components/layout/extension-link";
 import { AnimatedText } from "@/components/layout/animated-text";
 import { SponsorLink, BecomeSponsorLink, BuiltWithLink } from "@/components/layout/sponsor-link";
 import { ExcelsiorHero, ExcelsiorFeatures, ExcelsiorRegisterCTA } from "@/components/layout/excelsior-landing";
+import { ExcelsiorStats } from "@/components/layout/excelsior-stats";
 
 function getOrdinalSuffix(n: number): string {
   const s = ["th", "st", "nd", "rd"];
@@ -145,7 +146,7 @@ export default async function HomePage() {
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
                     <Sparkles className="h-3 w-3" />
-                    1,800+ Battle-tested Prompts
+                    Battle-tested Prompts
                   </span>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-muted text-muted-foreground border">
                     <Briefcase className="h-3 w-3" />
@@ -528,6 +529,9 @@ export default async function HomePage() {
           </div>
         </section>
       )}
+
+      {/* Live stats cards — Excelsior brand only */}
+      {useCloneBranding && <ExcelsiorStats />}
 
       {/* Animated feature cards — Excelsior brand only */}
       {useCloneBranding && <ExcelsiorFeatures />}

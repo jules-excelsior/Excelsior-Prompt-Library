@@ -21,7 +21,8 @@ export default defineConfig({
   },
 
   auth: {
-    providers: ["credentials", "google", "github"],
+    // Use credentials only — add "google" and "github" once OAuth apps are configured
+    providers: ["credentials"],
     allowRegistration: true,
   },
 
