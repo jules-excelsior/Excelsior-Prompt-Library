@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 
@@ -2402,8 +2403,13 @@ async function main() {
   await prisma.tag.deleteMany();
   console.log("✅ Cleared existing data");
 
-  // Create admin user
-  const password = await bcrypt.hash("password123", 12);
+  // Create admin user — password must be set via ADMIN_SEED_PASSWORD env var
+  const seedPassword = process.env.ADMIN_SEED_PASSWORD;
+  if (!seedPassword) {
+    console.error("❌ ADMIN_SEED_PASSWORD is not set. Add it to .env before running this seed.");
+    process.exit(1);
+  }
+  const password = await bcrypt.hash(seedPassword, 12);
   const admin = await prisma.user.upsert({
     where: { email: "admin@excelsior.com" },
     update: {},
@@ -2483,7 +2489,7 @@ async function main() {
   console.log("\n🎉 Excelsior seeding complete!");
   console.log("\n📋 Admin credentials:");
   console.log("   Email: admin@excelsior.com");
-  console.log("   Password: password123");
+  console.log("   Password: [set via ADMIN_SEED_PASSWORD env var]");
 }
 
 main()

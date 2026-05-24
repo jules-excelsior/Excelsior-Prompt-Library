@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { PrismaClient, PromptType, StructuredFormat, RequiredMediaType } from "@prisma/client";
 import bcrypt from "bcryptjs";
 
@@ -71,9 +72,14 @@ async function fetchPrompts(): Promise<RemotePromptsResponse> {
 async function main() {
   console.log("🌱 Seeding database from prompts.chat...");
 
-  // Create admin user for assigning prompts
-  const password = await bcrypt.hash("password123", 12);
-  
+  // Create admin user for assigning prompts — password from env var
+  const seedPassword = process.env.ADMIN_SEED_PASSWORD;
+  if (!seedPassword) {
+    console.error("❌ ADMIN_SEED_PASSWORD is not set. Add it to .env before running this seed.");
+    process.exit(1);
+  }
+  const password = await bcrypt.hash(seedPassword, 12);
+
   const admin = await prisma.user.upsert({
     where: { email: "admin@prompts.chat" },
     update: {},
@@ -281,7 +287,7 @@ async function main() {
 
   console.log(`✅ Created ${promptsCreated} prompts (${promptsSkipped} skipped)`);
   console.log("\n🎉 Seeding complete!");
-  console.log("\n📋 Test credentials (password: password123):");
+  console.log("\n📋 Test credentials (password set via ADMIN_SEED_PASSWORD env var):");
   console.log("   Admin: admin@prompts.chat");
 }
 

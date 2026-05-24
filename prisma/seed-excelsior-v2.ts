@@ -30,8 +30,13 @@ async function main() {
   await prisma.user.deleteMany();
   console.log("✓ Cleared existing data");
 
-  // Admin user
-  const hashedPassword = await bcrypt.hash("ExcelsiorAdmin2025!", 10);
+  // Admin user — password must be set via ADMIN_SEED_PASSWORD env var
+  const seedPassword = process.env.ADMIN_SEED_PASSWORD;
+  if (!seedPassword) {
+    console.error("❌ ADMIN_SEED_PASSWORD is not set. Add it to .env before running this seed.");
+    process.exit(1);
+  }
+  const hashedPassword = await bcrypt.hash(seedPassword, 10);
   const admin = await prisma.user.create({
     data: {
       name: "Excelsior Admin",
@@ -2816,7 +2821,7 @@ Act as a Senior HR Business Partner in the Philippines specializing in grievance
   console.log("\n🎉 Excelsior Prompt Library v2 seeded successfully!");
   console.log("─────────────────────────────────────────────────");
   console.log(`   Admin:      excelsiorconsultancys@gmail.com`);
-  console.log(`   Password:   ExcelsiorAdmin2025!`);
+  console.log(`   Password:   [set via ADMIN_SEED_PASSWORD env var]`);
   console.log(`   Categories: ${categoryData.length}`);
   console.log(`   Prompts:    ${count}`);
   console.log(`   Framework:  8-part structure (Purpose → Role → Context → Inputs → Constraints → Output Format → Quality Standard → Negative Instructions)`);
